@@ -45,3 +45,11 @@
     flex-direction: column;
     justify-content: center;
 }
+
+
+.header_icon{
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
+
+}
