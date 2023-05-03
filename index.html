@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohit Chaudhari</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="CSS/nav_styles.css">
     <link rel="stylesheet" href="CSS/section_styles.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/swiper.css">
     <link rel="stylesheet" href="CSS/responsive.css">
     <style>
         body{
@@ -122,7 +124,7 @@
     <!-- =============================================================================== -->
     <div class="section-separator"></div>
     <!-- =============================================================================== -->
-
+    
     <section class="section width-700-inf">
         <div class="section-container">
             <div class="section-row justify_center">
@@ -132,9 +134,23 @@
                 <div class="section-column width-40">
                     <p class="about_p">I am a software engineer specializing in developing machine learning APIs. I have worked on Face Recognition, Identity matching, and Know Your Customer (KYC) systems. During my undergraduate program, I was doing research on Natural Language Processing using Deep Learning and published several papers for the same.</p>
                     <p class="about_p">I am fascinated by the meteoric rise of AI-generated content. Tools like ChatGTP-4, Stable Diffusion, and Elevenlabs, have given the power of AI to content creators, who have in turn used to it create masterpieces. The allure of image generation has got me experimenting with Stable Diffusion, leading to the creations shown on the right.</p>
+                    <div class="see_more_button_parent">
+                        <a class="see_more_button">
+                            See More
+                        </a>
+                    </div>
                 </div>
                 <div class="section-column width-50">
-                    <img src="images/placeholder_art.jpg">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/placeholder_art.jpg"></div>
+                            <div class="swiper-slide"><img src="images/placeholder_art_2.webp"></div>
+                            <div class="swiper-slide"><img src="images/placeholder_art_3.png"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -153,7 +169,16 @@
                     <p class="about_p">I am fascinated by the meteoric rise of AI-generated content. Tools like ChatGTP-4, Stable Diffusion, and Elevenlabs, have given the power of AI to content creators, who have in turn used to it create masterpieces. The allure of image generation has got me experimenting with Stable Diffusion, leading to the creations shown below.</p>
                 </div>
                 <div class="section-row">
-                    <img src="images/placeholder_art.jpg">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/placeholder_art.jpg"></div>
+                            <div class="swiper-slide"><img src="images/placeholder_art_2.webp"></div>
+                            <div class="swiper-slide"><img src="images/placeholder_art_3.png"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
             <div class="section-column width-0-400">
@@ -167,8 +192,22 @@
                     <p class="about_p">I am fascinated by the meteoric rise of AI-generated content. Tools like ChatGTP-4, Stable Diffusion, and Elevenlabs, have given the power of AI to content creators, who have in turn used to it create masterpieces. The allure of image generation has got me experimenting with Stable Diffusion, leading to the creations shown below.</p>
                 </div>
                 <div class="section-row">
-                    <img src="images/placeholder_art.jpg">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/placeholder_art.jpg"></div>
+                            <div class="swiper-slide"><img src="images/placeholder_art_2.webp"></div>
+                            <div class="swiper-slide"><img src="images/placeholder_art_3.png"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
+            </div>
+            <div class="see_more_button_parent">
+                <a class="see_more_button">
+                    See More
+                </a>
             </div>
         </div>
     </section>
@@ -208,5 +247,23 @@
             </ul>
         </div>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  max-width: 80%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-prev::after{
+    padding-right: 10px;
+}
+
+.swiper-button-next::after{
+    padding-left: 10px;
+}
+
+:root{
+    --swiper-navigation-size:44px;
+}

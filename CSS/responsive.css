@@ -62,6 +62,10 @@
         padding: 2%;
         text-align: center;
     }
+
+    :root{
+        --swiper-navigation-size:30px;
+    }
 }
 
 
@@ -116,6 +120,10 @@
         padding: 2%;
         text-align: center;
     }
+
+    :root{
+        --swiper-navigation-size:30px;
+    }
 }
 
 
@@ -163,6 +171,10 @@
     .about_p{
         font-size: 1rem;
         text-align: center;
+    }
+
+    :root{
+        --swiper-navigation-size:30px;
     }
 
 }
