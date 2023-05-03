@@ -1,0 +1,30 @@
+footer {
+    background-color: #0F2C58;
+}
+
+.footer-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer_social_media_icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.footer_social_media_icons li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.footer_social_media_icons li svg{
+    fill: white;
+    cursor: pointer;
+}
