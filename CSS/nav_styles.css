@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-around;
     font-size: larger;
-    padding-top: 20px;
+    padding-top: 30px;
     background-color: #F3F1F6;
 }
 
@@ -52,4 +52,11 @@
     max-height: 60px;
     object-fit: contain;
 
+}
+
+.nav ul li a:link,
+.nav ul li a:visited,
+.nav ul li a:active{
+    text-decoration: none;
+    color: black;
 }
