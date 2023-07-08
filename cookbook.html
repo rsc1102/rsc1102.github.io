@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Chaudhari</title>
+    <link rel="stylesheet" href="CSS/cookbook.css">
+    <link rel="icon" type="image/x-icon" href="images/cookbook_favicon.ico">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Rohit's Cook Book</h1>
+        </div>
+        <div>
+            <input type="text" id="search_bar"> 
+            <button id="search_button">Search</button>
+        </div>
+    </header>
+
+    <dialog class="modal" id="modal">
+        <div class="modal_recipe_summary">
+            <div class="modal_top">
+                <h2 id="modal_recipe_name"></h2>
+                <svg onclick="modal.close()" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px"><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
+            </div>
+            <div class="modal_middle">
+                <img id="modal_recipe_image">
+                <h3>Ingredients:</h3>
+                <ol id="modal_ingredients_list">
+                </ol> 
+            </div>
+            <div class="modal_bottom">
+                <h4>Time Required: <span id="modal_time_required"></span></h4>
+                <h3>Procedure:</h3>
+                <ol id="modal_procedure"></ol>
+            </div>
+        </div>
+        
+    </dialog>
+
+    <div class="recipe_board">
+        <div class="recipe_summary">
+            <h2 class="recipe_name">adbc Recipe Name 1</h2>
+            <img class="recipe_image" src="/images/Vada_Pav.jpeg">
+            <h4>Time Required: <span class="time_required">1hr</span></h4>
+            <h4>Ingredients:</h4>
+            <ol class="ingredients_list">
+                <li>Salt</li>
+                <li>Pav</li>
+                <li>Vada</li>
+                <li>Pav</li>
+                <li>Vada</li>
+                <li>Pav</li>
+                <li>Vada</li>
+                <li>Pav</li>
+                <li>Vada</li>
+                <li>Pav</li>
+                <li>Vada</li>
+                <li>Pav</li>
+                <li>Vada</li>
+                <li>Pav</li>
+                <li>Vada</li>
+                <li>Pav</li>
+            </ol> 
+            <ol class="procedure">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
+            </ol>
+        </div>
+
+        <div class="recipe_summary">
+            <h2 class="recipe_name">ac Recipe Name 2</h2>
+            <img class="recipe_image" src="/images/Vada_Pav.jpeg">
+            <h4>Time Required: <span class="time_required">2hr</span></h4>
+            <h4>Ingredients:</h4>
+            <ol class="ingredients_list">
+                <li>Vada</li>
+                <li>Pav</li>
+                <li>Samosa</li>
+            </ol> 
+            <ol class="procedure"></ol>
+        </div>
+
+
+        <div class="recipe_summary">
+            <h2 class="recipe_name">abc Recipe Name 2</h2>
+            <img class="recipe_image" src="/images/Vada_Pav.jpeg">
+            <h4>Time Required: <span class="time_required">2hr</span></h4>
+            <h4>Ingredients:</h4>
+            <ol class="ingredients_list">
+                <li>Vada</li>
+                <li>Pav</li>
+                <li>Samosa</li>
+            </ol> 
+            <ol class="procedure"></ol>
+        </div>
+    </div>
+  
+
+    <script>
+        const modal = document.getElementById("modal");
+        const modal_recipe_name = document.getElementById("modal_recipe_name");
+        const modal_recipe_image = document.getElementById("modal_recipe_image");
+        const modal_time_required = document.getElementById("modal_time_required");
+        const modal_ingredients_list = document.getElementById("modal_ingredients_list");
+        const modal_procedure = document.getElementById("modal_procedure");
+        const recipes = document.querySelectorAll('.recipe_summary');
+
+        recipes.forEach(item => {
+            // activating modal
+            item.addEventListener('click',function(){
+                modal_recipe_name.innerText = item.querySelector(".recipe_name").innerText;
+                modal_recipe_image.src = item.querySelector(".recipe_image").src;
+                modal_time_required.innerText = item.querySelector(".time_required").innerText;
+                modal_ingredients_list.innerHTML = item.querySelector(".ingredients_list").innerHTML;
+                if(modal_ingredients_list.childNodes.length > 8){
+                    modal_ingredients_list.classList.add("multiple_columns");
+                }else{
+                    modal_ingredients_list.classList.remove("multiple_columns");
+                }
+                modal_procedure.innerHTML = item.querySelector(".procedure").innerHTML;
+                modal.showModal();
+            })
+
+            // determining if ingredients_list requires one or more columns based on number of ingredients
+            const ingredients_list = item.querySelector(".ingredients_list");
+            if(ingredients_list.childNodes.length > 8){
+                ingredients_list.classList.add("multiple_columns");
+            }
+
+            // sort recipe summaries aphabetically
+            sort_alphabetically();
+        })
+
+
+
+        const search_bar = document.getElementById("search_bar");
+        const search_button = document.getElementById("search_button");
+        search_button.onclick = function(){
+            const search_text = search_bar.value;
+            // searching for recipes based on ingredients
+            if(search_text.slice(0, 12) === "ingredients:"){
+                const search_tokens = search_text.slice(12).toLowerCase().trim().split(',').filter(token => token != "");
+                recipes.forEach(item => {
+                    item.classList.remove("hide");
+                    const ingredients_list = item.querySelector(".ingredients_list").querySelectorAll('li');
+                    let ingredients_list_items = []
+                    ingredients_list.forEach(ingredient => ingredients_list_items.push(ingredient.innerText.toLowerCase()));
+                    if(!search_tokens.every(element =>ingredients_list_items.includes(element.trim()))){
+                        item.classList.add("hide");
+                    }
+                })
+            }
+            // searching for recipes based on dish name
+            else{
+                const search_tokens = search_text.toLowerCase().trim().split(/\W+/).filter(token => token != "");
+                recipes.forEach(item => {
+                    item.classList.remove("hide");
+                    const recipe_name_tokens = item.querySelector(".recipe_name").innerText.toLowerCase().trim().split(/\W+/).filter(token => token != "");
+                    if(!search_tokens.every(element =>recipe_name_tokens.includes(element.trim()))){
+                        item.classList.add("hide");
+                    }
+                })
+            }
+
+            // sort recipe summaries aphabetically
+            sort_alphabetically();
+        }
+
+
+        function sort_alphabetically(){
+            const selector = element => element.querySelector('.recipe_name').innerText;
+            const elements = [...recipes];
+            const parentElement = elements[0].parentNode;
+            const collator = new Intl.Collator(undefined, {sensitivity: 'base'});
+            elements.sort((firstElement, secondElement) => {
+                const textOfFirstElement = selector(firstElement);
+                const textOfSecondElement = selector(secondElement);
+                return collator.compare(textOfFirstElement , textOfSecondElement);
+            }).forEach(element => parentElement.appendChild(element));
+        }
+    </script>
+</body>
+</html>
