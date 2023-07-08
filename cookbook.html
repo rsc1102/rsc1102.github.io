@@ -22,7 +22,7 @@
         <div class="modal_recipe_summary">
             <div class="modal_top">
                 <h2 id="modal_recipe_name"></h2>
-                <svg onclick="modal.close()" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px"><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
+                <svg onclick="close_modal()" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px"><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
             </div>
             <div class="modal_middle">
                 <img id="modal_recipe_image">
@@ -133,6 +133,7 @@
                 }
                 modal_procedure.innerHTML = item.querySelector(".procedure").innerHTML;
                 modal.showModal();
+                document.querySelector("body").classList.add("modal_open");
             })
 
             // determining if ingredients_list requires one or more columns based on number of ingredients
@@ -146,13 +147,12 @@
         })
 
 
-
         const search_bar = document.getElementById("search_bar");
         const search_button = document.getElementById("search_button");
         search_button.onclick = function(){
             const search_text = search_bar.value;
             // searching for recipes based on ingredients
-            if(search_text.slice(0, 12) === "ingredients:"){
+            if(search_text.slice(0, 12).toLowerCase() === "ingredients:"){
                 const search_tokens = search_text.slice(12).toLowerCase().trim().split(',').filter(token => token != "");
                 recipes.forEach(item => {
                     item.classList.remove("hide");
@@ -175,9 +175,6 @@
                     }
                 })
             }
-
-            // sort recipe summaries aphabetically
-            sort_alphabetically();
         }
 
 
@@ -191,6 +188,12 @@
                 const textOfSecondElement = selector(secondElement);
                 return collator.compare(textOfFirstElement , textOfSecondElement);
             }).forEach(element => parentElement.appendChild(element));
+        }
+
+        
+        function close_modal(){
+            document.querySelector("body").classList.remove("modal_open");
+            modal.close()
         }
     </script>
 </body>

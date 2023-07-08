@@ -3,6 +3,10 @@ body{
     background-color: #C4B0FF;
 }
 
+body.modal_open{
+    overflow: hidden;
+}
+
 header {
     display: flex;
     flex-direction: column;
