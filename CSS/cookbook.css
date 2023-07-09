@@ -163,6 +163,15 @@ header h1 {
 #modal_ingredients_list.multiple_columns{
     column-count: 2;
     column-width: auto;
+    column-gap: 20px;
+}
+
+#modal_procedure {
+    margin-top: 0px;
+}
+
+#modal_procedure li {
+    font-size: 1.3em;
 }
 
 
@@ -170,6 +179,10 @@ header h1 {
 
 @media screen and (min-width: 800px) and (max-width: 1000px){
     #modal_ingredients_list{
+        font-size: 1em;
+    }
+
+    #modal_procedure li {
         font-size: 1em;
     }
 
@@ -191,6 +204,10 @@ header h1 {
     #modal_ingredients_list{
         font-size: 0.85em;
         padding-inline-start:10px;
+    }
+
+    #modal_procedure li {
+        font-size: 0.85em;
     }
 
     #modal h3{
@@ -223,6 +240,10 @@ header h1 {
     }
 
     #modal_ingredients_list{
+        font-size: 1em;
+    }
+
+    #modal_procedure li {
         font-size: 1em;
     }
 
