@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohit Chaudhari</title>
     <link rel="stylesheet" href="CSS/cookbook.css">
-    <link rel="icon" type="image/x-icon" href="images/cookbook_favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon/cookbook_favicon.ico">
 </head>
 <body>
     <header>
@@ -25,7 +25,9 @@
                 <svg onclick="close_modal()" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px"><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
             </div>
             <div class="modal_middle">
-                <img id="modal_recipe_image">
+                <picture id="modal_picture">
+                    <img id="modal_recipe_image">
+                </picture>
                 <h3>Ingredients:</h3>
                 <ol id="modal_ingredients_list">
                 </ol> 
@@ -41,69 +43,15 @@
 
     <div class="recipe_board">
         <div class="recipe_summary">
-            <h2 class="recipe_name">adbc Recipe Name 1</h2>
-            <img class="recipe_image" src="/images/Vada_Pav.jpeg">
-            <h4>Time Required: <span class="time_required">1hr</span></h4>
+            <h2 class="recipe_name"></h2>
+            <picture class="recipe_picture" style="display: none;">
+                <source media="(min-width:800px)" srcset="images/cookbook/food_placeholder_800_600.jpg">
+                <source media="(min-width:600px)" srcset="images/cookbook/food_placeholder_600_450.jpg">
+            </picture>
+            <img class="recipe_image" src="images/cookbook/food_placeholder_400_300.jpg">
+            <h4>Time Required: <span class="time_required"></span></h4>
             <h4>Ingredients:</h4>
             <ol class="ingredients_list">
-                <li>Salt</li>
-                <li>Pav</li>
-                <li>Vada</li>
-                <li>Pav</li>
-                <li>Vada</li>
-                <li>Pav</li>
-                <li>Vada</li>
-                <li>Pav</li>
-                <li>Vada</li>
-                <li>Pav</li>
-                <li>Vada</li>
-                <li>Pav</li>
-                <li>Vada</li>
-                <li>Pav</li>
-                <li>Vada</li>
-                <li>Pav</li>
-            </ol> 
-            <ol class="procedure">
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit minus nulla illum, obcaecati hic atque ducimus esse quaerat? Velit alias expedita laudantium natus explicabo adipisci distinctio eos molestias dolorum.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit voluptates similique architecto, tempora reprehenderit repellendus, animi delectus sed quis ducimus! Aut impedit quia, minima sunt odio aperiam omnis ab.</li>
-            </ol>
-        </div>
-
-        <div class="recipe_summary">
-            <h2 class="recipe_name">ac Recipe Name 2</h2>
-            <img class="recipe_image" src="/images/Vada_Pav.jpeg">
-            <h4>Time Required: <span class="time_required">2hr</span></h4>
-            <h4>Ingredients:</h4>
-            <ol class="ingredients_list">
-                <li>Vada</li>
-                <li>Pav</li>
-                <li>Samosa</li>
-            </ol> 
-            <ol class="procedure"></ol>
-        </div>
-
-
-        <div class="recipe_summary">
-            <h2 class="recipe_name">abc Recipe Name 2</h2>
-            <img class="recipe_image" src="/images/Vada_Pav.jpeg">
-            <h4>Time Required: <span class="time_required">2hr</span></h4>
-            <h4>Ingredients:</h4>
-            <ol class="ingredients_list">
-                <li>Vada</li>
-                <li>Pav</li>
-                <li>Samosa</li>
             </ol> 
             <ol class="procedure"></ol>
         </div>
@@ -113,6 +61,7 @@
     <script>
         const modal = document.getElementById("modal");
         const modal_recipe_name = document.getElementById("modal_recipe_name");
+        const modal_picture = document.getElementById("modal_picture");
         const modal_recipe_image = document.getElementById("modal_recipe_image");
         const modal_time_required = document.getElementById("modal_time_required");
         const modal_ingredients_list = document.getElementById("modal_ingredients_list");
@@ -123,6 +72,9 @@
             // activating modal
             item.addEventListener('click',function(){
                 modal_recipe_name.innerText = item.querySelector(".recipe_name").innerText;
+                item.querySelectorAll("source").forEach(src => {
+                    modal_picture.insertBefore(src.cloneNode(),modal_recipe_image);
+                })
                 modal_recipe_image.src = item.querySelector(".recipe_image").src;
                 modal_time_required.innerText = item.querySelector(".time_required").innerText;
                 modal_ingredients_list.innerHTML = item.querySelector(".ingredients_list").innerHTML;
@@ -192,6 +144,10 @@
 
         
         function close_modal(){
+            // remove source tags from picture tag
+            modal_picture.querySelectorAll("source").forEach(src => {
+                src.remove();
+            })
             document.querySelector("body").classList.remove("modal_open");
             modal.close()
         }
