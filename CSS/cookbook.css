@@ -69,6 +69,10 @@ header h1 {
     cursor: pointer;
 }
 
+.recipe_summary .recipe_name {
+    margin-bottom: 5px;
+}
+
 .recipe_summary .recipe_image {
     max-width: 300px;
     max-height: 300px;
